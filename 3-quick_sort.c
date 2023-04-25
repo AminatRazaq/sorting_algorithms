@@ -1,7 +1,7 @@
 #include "sort.h"
 
 void swap_ints(int *x, int *y);
-int lomuto_partitn(int *array, size_t size, int left, int right);
+int lomuto_partition(int *array, size_t size, int left, int right);
 void lomuto_sort(int *array, size_t size, int left, int right);
 void quick_sort(int *array, size_t size);
 
@@ -20,7 +20,7 @@ void swap_ints(int *x, int *y)
 }
 
 /**
- * lomuto_partitn - Order a subset of an array of integers according to
+ * lomuto_partition - Order a subset of an array of integers according to
  *                    the lomuto partition scheme (last element as pivot).
  * @array: The array of integers.
  * @size: The size of the array.
@@ -29,7 +29,7 @@ void swap_ints(int *x, int *y)
  *
  * Return: The final partition index.
  */
-int lomuto_partitn(int *array, size_t size, int left, int right)
+int lomuto_partition(int *array, size_t size, int left, int right)
 {
 	int *pivot, above, below;
 
